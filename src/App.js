@@ -76,15 +76,22 @@ function App() {
   return (
     <>
       <h1>Markdown Previewer</h1>
-      <textarea
-        name='editor'
-        id='editor'
-        cols='100'
-        rows='20'
-        onChange={handleChange}
-        value={markdown}
-      />
-      <div id='preview' dangerouslySetInnerHTML={createMarkup()} />
+      <div className='flex-container'>
+        <textarea
+          name='editor'
+          className='textarea'
+          id='editor'
+          cols='100'
+          rows='20'
+          onChange={handleChange}
+          value={markdown}
+        />
+        <div
+          className='textarea'
+          id='preview'
+          dangerouslySetInnerHTML={createMarkup()}
+        />
+      </div>
     </>
   );
 }
